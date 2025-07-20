@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tanda orang peduli denngan mu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff0f5;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff4b91;
+      font-size: 2.5em;
+      margin: 10px;
+    }
+
+    .btn {
+      padding: 15px 35px;
+      margin: 10px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .yes {
+      background-color: #ff4b91;
+      color: white;
+    }
+
+    .no {
+      background-color: #bbb;
+      color: white;
+      position: absolute;
+    }
+
+    .stiker {
+      width: 150px;
+      height: auto;
+      animation: goyang 2s infinite;
+    }
+
+    @keyframes goyang {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(4deg); }
+      75% { transform: rotate(-4deg); }
+    }
+
+    .result {
+      font-size: 1.5em;
+      color: #ff4b91;
+    }
+
+    .wa-btn {
+      margin-top: 20px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 12px 30px;
+      font-size: 1.1em;
+      border-radius: 10px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .wa-btn:hover {
+      background-color: #1ebd5a;
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+  </audio>
+
+  <img class="stiker" src="https://media.tenor.com/7ovf9tCg_yUAAAAi/tonton-friends-tonton.gif" alt="Boneka Gerak">
+
+  <h1>Barakallahufiik li umru...!! 
+  semoga ummurnya berkah ya dan terus di isi dengan kebaikan ya... </h1></h1>
+
+  <button class="btn yes" onclick="jawab()">Ø¢Ù…ÙŠÙ†</button></button>
+              <button class="btn no" id="noBtn">Ø¥Ù†Ø´Ø§Ù„Ù„Ù‡</button>
+
+  <!-- Tombol kirim salam -->
+  <a class="wa-btn" href="https://wa.me/6283134173519?text=Ø§Ù†Ø§%20Ø§Ø­Ø¨Ùƒ%20ÙÙŠ%20Ø§Ù„Ù„Ù‡" target="_blank">Kirim salam yuk ke beliau</a>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 100);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+
+    function jawab() {
+      document.body.innerHTML = `
+        <img class="stiker" src="https://media.tenor.com/w0gNSe8HRGIAAAAi/love-bear.gif" alt="Boneka Cinta">
+        <h1 class="result">jangan lupa sholat pokok nya ok..</h1>
+        <p class="result">Jangan lupa sholat ya cantik</p>
+        <p class="result">Owh iya sekarang udah nambah berapa nih umurnya....</p>
+        <a class="wa-btn" href="https://wa.me/6283134173519?text=Ø§Ù†Ø§%20Ø§Ø­Ø¨Ùƒ%20ÙÙŠ%20Ø§Ù„Ù„Ù‡" target="_blank">Ajak ngomong beliau yuk..</a>
+                <a class="wa-btn" href="_blank" target="_blank">Ajak ngomong beliau yuk..</a>
+        <p class="result">@mtdh.id</p
+      `;
+    }
+  </script>
+
+</body>
+  </html>
